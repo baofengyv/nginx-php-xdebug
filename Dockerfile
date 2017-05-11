@@ -15,7 +15,7 @@ RUN apt-get update \
 ADD nginx.conf /etc/nginx/sites-available/default
 
 # for TEST
-RUN echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+#RUN echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
